@@ -1,0 +1,116 @@
+
+
+
+/*===========================
+        04.ABOUT css 
+===========================*/
+
+
+.about_area{
+    position: relative;
+}
+
+.about_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    
+    @media #{$md}{
+        width: 720px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: inherit;
+        height: auto;
+        margin-top: 5px;
+    }
+    @media #{$xs}{
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: inherit;
+        height: auto;
+        margin-top: 5px;
+    }
+    
+    @media #{$sm}{
+        width: 540px;
+    }
+    
+    & .image{
+        padding-right: 50px;
+        
+        @media #{$md}{
+            padding-right: 0;
+        }
+        @media #{$xs}{
+            padding-right: 0;
+        }
+        
+        & img{
+            max-width: 770px;
+            
+            @media #{$md}{
+                 max-width: 100%;
+            }
+            @media #{$xs}{
+                 max-width: 100%;
+            }
+        }
+    }
+}
+
+.about_content{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    @media #{$md}{
+        padding-top: 45px;
+        padding-bottom: 0;
+    }
+    @media #{$xs}{
+        padding-top: 45px;
+        padding-bottom: 0;
+    }
+    
+    & p{}
+    & .about_list{
+        padding-top: 10px;
+        
+        & li{
+            margin-top: 20px;
+            
+            & .about_check{
+                & i{
+                    font-size: 16px;
+                    width: 27px;
+                    height: 27px;
+                    line-height: 27px;
+                    text-align: center;
+                    color: $white;
+                    background-color: $theme-color;
+                    border-radius: 50%;
+                    @include transition(0.3s);
+                    position: relative;
+                    top: 4px;
+                }
+            }
+            & .about_list_content{
+                padding-left: 20px;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

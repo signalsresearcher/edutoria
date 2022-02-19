@@ -1,0 +1,132 @@
+
+
+/*===========================
+       09.CONTACT css 
+===========================*/
+
+.contact_area{
+    position: relative;
+}
+
+p{
+    &.form-message.success,
+    &.form-message.error {
+        font-size: 16px;
+        color: #333;
+        background: #ddd;
+        padding: 10px 15px;
+        margin-top: 15px;
+        margin-left: 15px;
+        
+        &.form-message.error{
+            color: #f00;
+        }
+    }
+}
+
+
+.contact_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    
+    @media #{$md}{
+        width: 720px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: inherit;
+        height: auto;
+        margin-top: 50px;
+    }
+    @media #{$xs}{
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: inherit;
+        height: auto;
+        margin-top: 50px;
+    }
+    
+    @media #{$sm}{
+        width: 540px;
+    }
+    
+    & .image{
+        padding-right: 50px;
+        
+        @media #{$md}{
+            padding-right: 0;
+        }
+        @media #{$xs}{
+            padding-right: 0;
+        }
+        
+        & img{
+            max-width: 770px;
+            
+            @media #{$md}{
+                 max-width: 100%;
+            }
+            @media #{$xs}{
+                 max-width: 100%;
+            }
+        }
+    }
+}
+
+.contact_wrapper{
+    
+}
+.contact_form{
+    
+}
+
+.single_form{
+    margin-top: 30px;
+    
+    & textarea,
+    & input{
+        padding: 0 25px;
+        border: 1px solid rgba($body-color, 0.20);
+        height: 50px;
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+    & textarea{
+        padding-top: 15px;
+        height: 168px;
+        resize: none;
+    }
+    
+    & .main-btn{
+        background-color: $theme-color;
+        border-radius: 5px;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 40px;
+        color: $white;
+        
+        &:hover{
+            background-color: rgba($theme-color, 0.8);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

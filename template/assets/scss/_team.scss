@@ -1,0 +1,157 @@
+
+
+
+/*===========================
+         07.TEAM css 
+===========================*/
+
+.team_area{
+    background-color: $gray;
+}
+
+.single_team{
+    @include box-shadow (0px 3px 27px 0px rgba($shadow, 0.10));
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-color: $white;
+    @include transition(0.3s);
+    
+    & .team_image{
+        position: relative;
+        
+        & img{
+            width: 100%;
+        }
+        & .social{
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            
+            & li{
+                margin-top: 15px;
+                @include transition(0.3s);
+                @include transform(translateX(100%));
+                opacity: 0;
+                visibility: hidden;
+                
+                & a{
+                    width: 35px;
+                    height: 35px;
+                    line-height: 31px;
+                    text-align: center;
+                    border: 2px solid $white;
+                    color: $white;
+                    border-radius: 50%;
+                    font-size: 16px;
+                    @include transition(0.3s);
+                    
+                    &:hover{
+                        background-color: $theme-color;
+                        border-color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    & .team_content{
+        padding: 20px 30px;
+        position: relative;
+        
+        & .team_name{
+             & a{
+                font-size: 28px;
+                font-weight: 600;
+                color: $black;
+                @include transition(0.3s);
+                 
+                 @media #{$xs}{
+                     font-size: 20px;
+                 }
+            }
+        }
+        & p{
+            margin-top: 8px;
+            @include transition(0.3s);
+        }
+    }
+    
+    &:hover{
+        background-color: $theme-color;
+        
+        & .team_image{
+            & .social{
+                & li{
+                    @include transform(translateX(0));
+                    opacity: 1;
+                    visibility: visible;
+
+                    &:nth-of-type(1){
+                        @include transition-delay(0.1s);
+                    }
+                    &:nth-of-type(2){
+                        @include transition-delay(0.2s);
+                    }
+                    &:nth-of-type(3){
+                        @include transition-delay(0.3s);
+                    }
+                    &:nth-of-type(4){
+                        @include transition-delay(0.4s);
+                    }
+                }
+            }
+        }
+        
+        & .team_content{
+            & .team_name{
+                & a{
+                    color: $white;
+                }
+            }
+            
+            & p{
+                color: $white;
+            }
+        }
+    }
+}
+
+.team_active{
+    & .slick-dots{
+        width: 100%;
+        text-align: center;
+        
+        & li{
+            display: inline-block;
+            margin: 0 7px;
+            
+            & button{
+                font-size: 0;
+                padding: 0;
+                border: 0;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background-color: rgba($theme-color, 0.25);
+                @include transition(0.3s);
+            }
+            
+            &.slick-active{
+                & button{
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
